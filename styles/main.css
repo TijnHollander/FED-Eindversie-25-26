@@ -8,7 +8,7 @@
 /* Promo bar */
 header ul:first-child {
   background-color: var(--promo-bar-background);
-  color: var(--main-color);
+  color: var(--img-text);
   display: flex;
   height: 5vh;
   align-items: center;
@@ -26,8 +26,6 @@ header ul:nth-of-type(1) a {
   text-decoration: none;
   text-underline-position: below;
 }
-
-
 
 
 /**********************/
@@ -104,7 +102,7 @@ header>nav>menu:nth-of-type(1) {
 
 header>nav>ul:nth-of-type(2) {
   list-style: "";
-  gap: var(--gap-large);
+  gap: 1.4em; /* Gap kan kleiner doormiddel van clamp */
   display: inline-flex;
   flex-direction: row;
   align-items: center;
