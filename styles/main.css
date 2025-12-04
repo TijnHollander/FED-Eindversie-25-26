@@ -5,6 +5,45 @@
   margin: 0;
   padding: 0;
 }
+
+
+/* Hidden H1 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* voorkomt dat tekst meerdere regels wordt */
+  border: 0;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  position: static;
+  left: auto;
+  width: auto;
+  height: auto;
+  padding: 0.5em 1em;
+  background: var(--main-color);
+  color: var(--card-background);
+  z-index: 1000;
+}
+
+
 /* Promo bar */
 header ul:first-child {
   background-color: var(--promo-bar-background);
