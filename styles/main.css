@@ -1,0 +1,448 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Promo bar */
+header ul:first-child {
+  background-color: var(--promo-bar-background);
+  color: var(--main-color);
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+header ul:nth-of-type(1) li {
+  list-style-type: "";
+  text-align: center;
+}
+
+header ul:nth-of-type(1) a {
+  color: var(--main-color);
+  text-decoration: none;
+  text-underline-position: below;
+}
+
+
+
+
+/**********************/
+/* MAIN NAV (structure based) */
+/**********************/
+
+header>nav {
+  background-color: var(--tertiary-background);
+  border-bottom: 1px solid var(--primary-background);
+  z-index: 10;
+
+  /* max-width: var(--grid-max-width); */
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  height: 10vh;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 2rem;
+
+  position: relative;
+}
+
+/* Logo */
+header>nav>a:first-of-type {
+  font-size: 1.4rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--primary-text);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+header>nav>ul:nth-of-type(1) {
+  list-style: "";
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Links in menu */
+header>nav>ul:nth-of-type(1) li a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--primary-text);
+  white-space: nowrap;
+}
+
+/* Black Friday highlight */
+header>nav>ul:nth-of-type(1) li:first-of-type a {
+  color: var(--primary-text-link);
+  font-weight: 500;
+}
+
+/* Icons  */
+header>nav>menu:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* header>nav>menu:nth-of-type(1)>button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0;
+} */
+
+
+header>nav>ul:nth-of-type(2) {
+  list-style: "";
+  gap: var(--gap-large);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+
+}
+
+/* Links in menu */
+header>nav>ul:nth-of-type(2) svg {
+  color: var(--primary-text);
+  white-space: nowrap;
+  height: 17px;
+}
+
+/* Hamburger  */
+header>nav>button:last-of-type {
+  justify-self: end;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#disable-close-btn {
+  justify-self: end;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#disable-close-btn span {
+  display: block;
+  height: 2px;
+  width: var(--max-width);
+  background: var(--img-text);
+  /* Moet wit blijven */
+}
+
+#disable-close-btn span:first-of-type {
+  transform: translateY(3px) rotate(45deg);
+}
+
+#disable-close-btn span:last-of-type {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/* Lines burger */
+header>nav>button:last-of-type span {
+  display: block;
+  height: 2px;
+  width: var(--max-width);
+  background: var(--secondary-btn-color);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Nav open == true > animation transform */
+header>nav[data-open="true"]>button:last-of-type span:first-of-type {
+  transform: translateY(3px) rotate(45deg);
+}
+
+header>nav[data-open="true"]>button:last-of-type span:last-of-type {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+
+/**************/
+/* MOBIEL     */
+/**************/
+@media screen and (max-width: 64em) {
+  header>nav {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* dropdown menu */
+  header>nav>ul:nth-of-type(1) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    border-bottom: 1px solid var(--tertiary-background);
+
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1.5rem 1rem;
+  }
+
+
+  header>nav[data-open="true"]>ul:nth-of-type(1) {
+    display: flex;
+    background-color: var(--tertiary-background);
+  }
+}
+
+/**************/
+/* DESKTOP    */
+/**************/
+@media screen and (min-width: 64em) {
+  header>nav>ul:nth-of-type(1) {
+    display: flex;
+
+  }
+
+  /* hamburger = weg */
+  header>nav>button:last-of-type {
+    display: none;
+  }
+
+  header>nav>ul:nth-of-type(1) {
+    justify-self: center;
+  }
+
+  header>nav>menu:nth-of-type(1) {
+    justify-self: end;
+    gap: 1.5rem;
+  }
+
+  /* hover middle links  state  */
+  header>nav>ul:nth-of-type(1) li a {
+    position: relative;
+  }
+
+  header>nav>ul:nth-of-type(1) li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    width: 0;
+    height: 1px;
+    background: var(--primary-text);
+    transition: width 0.2s ease;
+  }
+
+  header>nav>ul:nth-of-type(1) li a:hover::after {
+    width: var(--max-width);
+  }
+}
+
+/* main nav states */
+header a:focus-visible:not(.promo-bar) {
+  outline: 4px solid var(--focus-ring-color);
+  outline-offset: 5px;
+
+  & a:hover {
+    color: var(--primary-text);
+    text-decoration: none;
+    text-underline-position: below;
+  }
+}
+
+header a:active {
+  background-color: pink;
+  /* Tijdelijke placeholder */
+}
+
+
+
+
+/****************************/
+/* Footer                  */
+/****************************/
+footer {
+  background-color: #222;
+  color: #fff;
+  margin-top: 4rem;
+}
+
+/* footer max width geven zodat alles nice loopt */
+footer>section {
+  max-width: var(--grid-max-width);
+  margin: 0 auto;
+  padding: 2.5rem ;
+}
+
+/* nieuwsbrief */
+footer>section:first-of-type {
+  border-bottom: 1px solid #444;
+}
+
+footer>section:first-of-type h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+footer>section:first-of-type p {
+  color: #ddd;
+  max-width: 32rem;
+}
+
+/* form */
+footer>section:first-of-type form {
+  margin: 1.5rem 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+footer>section:first-of-type form input[type="email"] {
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  border: none;
+  min-width: min(20rem, 100%);
+  background-color: #111;
+  color: #fff;
+}
+
+footer>section:first-of-type form button {
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Checkbox */
+footer>section:first-of-type>label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  max-width: 34rem;
+}
+
+footer>section:first-of-type>label input[type="checkbox"] {
+  margin-top: 0.25rem;
+}
+
+footer>section:first-of-type>label a {
+  color: #fff;
+}
+
+footer>section:nth-of-type(3) {
+  border-bottom: 1px solid #444;
+}
+
+footer>section:nth-of-type(2)>ul {
+  list-style: "";
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+/* !ELKE! kolom */
+footer>section:nth-of-type(2)>ul>li>h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+footer>section:nth-of-type(2)>ul>li>ul {
+  list-style: "";
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+footer>section:nth-of-type(2) a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+footer>section:nth-of-type(2) a:hover {
+  text-decoration: underline;
+}
+
+footer>section:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+  font-size: 0.8rem;
+}
+
+footer>section:last-of-type>p:first-of-type {
+  margin-right: auto;
+}
+
+footer>section:last-of-type>ul {
+  list-style: "";
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+footer>section:last-of-type>ul a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer>section:last-of-type>ul a:hover {
+  text-decoration: underline;
+}
+
+/*********************/
+/* Footer responsive shizzle */
+/*********************/
+@media (min-width: 64em) {
+
+  /* nieuwsbrief + input + checkbox === breder */
+  footer>section:first-of-type {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    column-gap: 4rem;
+    align-items: start;
+  }
+
+  footer>section:first-of-type form {
+    flex-wrap: nowrap;
+  }
+
+  /* kolomen 5 grid */
+  footer>section:nth-of-type(2)>ul {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+
+@media (max-width: 48em) {
+  footer>section:nth-of-type(2)>ul>li {
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+  }
+}

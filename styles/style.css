@@ -1,0 +1,318 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+/* BRONNEN
+1. https://cmd-amsterdam.nl/zelfevaluatie2024/standaard2/
+
+2. https://ryanmulligan.dev/blog/layout-breakouts/
+
+3. https://www.google.com/search?q=css+break-out+grid+&sca_esv=23dd50ea98785b26&biw=1800&bih=1038&sxsrf=AE3TifM1yHsg4lAEYmJGGXf6ZX3qN0wb8A%3A1764842590479&ei=XlwxafWDHaq6i-gPzrCLqQM&ved=0ahUKEwj1qsL91qORAxUq3QIHHU7YIjUQ4dUDCBE&uact=5&oq=css+break-out+grid+&gs_lp=Egxnd3Mtd2l6LXNlcnAiE2NzcyBicmVhay1vdXQgZ3JpZCAyBBAjGCcyBhAAGBYYHjIIEAAYgAQYogQyBRAAGO8FMggQABiABBiiBDIFEAAY7wVI-QRQlgJYlgJwAXgAkAEAmAFLoAFLqgEBMbgBA8gBAPgBAZgCAqACV8ICCBAAGLADGO8FwgILEAAYgAQYsAMYogSYAwCIBgGQBgSSBwEyoAfnBLIHATG4B1LCBwMyLTLIBwg&sclient=gws-wiz-serp
+
+*/
+
+
+body {
+	margin: 0;
+}
+
+main {
+	display: grid;
+	row-gap: var(--gap);
+
+	grid-template-columns:
+		[full-start] 1fr [base-start] min(calc(100% - 2em), 72em) [base-end] 1fr [full-end];
+
+}
+
+main section {
+	/* background-image: linear-gradient(45deg in oklch, pink, blue); */
+	grid-column: base;
+
+	/* Section Hero */
+	&:nth-of-type(1) {
+		grid-column: full;
+		height: var(--full-vh);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		z-index: 2;
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: var(--img-overlay);
+			z-index: -1;
+		}
+
+		/* Video hero */
+		& video {
+			object-fit: cover;
+			position: absolute;
+			width: var(--max-width);
+			height: var(--max-height);
+			z-index: -2;
+
+		}
+
+		/* Overlay text hero */
+		& h2 {
+			color: var(--img-text);
+			font-size: var(--heading-xl);
+			font-weight: 400;
+		}
+
+		& a {
+			cursor: pointer;
+			display: inline-block;
+			padding: var(--secondary-btn-padding);
+			border-radius: var(--secondary-btn-radius);
+			border: 1px solid var(--img-border-btn);
+			color: var(--img-text);
+			font-size: var(--secondary-btn-font-size);
+			text-decoration: none;
+			transition: 0.2s ease;
+		}
+	}
+
+	&:nth-of-type(2) {
+		position: relative;
+		display: grid;
+		justify-content: start;
+		align-content: center;
+		text-align: left;
+		height: 60vh;
+		border: 0px;
+		border-radius: 2rem;
+		overflow: hidden;
+		color: var(--img-text);
+		/* Anders werkt border radius niet :) */
+		padding: clamp(1.5rem, 4vw, 4em);
+		grid-auto-rows: min(1fr);
+		gap: 0.3rem;
+
+
+		/* grid-column: base; */
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: var(--img-overlay);
+			z-index: -1;
+		}
+
+		& img {
+			object-fit: cover;
+			position: absolute;
+			width: var(--max-width);
+			height: var(--max-height);
+			z-index: -2;
+
+		}
+
+		& h2 {
+			font-size: 40px;
+			font-weight: 400;
+		}
+
+		& p {
+			font-size: 21px;
+		}
+
+		& a {
+			cursor: pointer;
+			display: inline-block;
+			padding: var(--tertiary-btn-padding);
+			border-radius: var(--secondary-btn-radius);
+			border: 1px solid var(--img-border-btn);
+			color: var(--img);
+			font-size: var(--secondary-btn-font-size);
+			text-decoration: none;
+			transition: 0.2s ease;
+			width: fit-content;
+		}
+
+	}
+
+	&:nth-of-type(3) {
+
+
+		& ul {
+			list-style: "";
+			margin: 0;
+			/* Moet op 0 zodat de default value wordt weergeven aan de parent > body */
+			padding: 0;
+			/* zelfe hier  */
+
+		}
+
+		& li {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-areas:
+				"titel"
+				"tekst"
+				"quote"
+				"foto";
+			/* display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr max-content 1fr;
+			grid-template-areas:
+				"titel foto"
+				"tekst foto"
+				"quote foto"; */
+		}
+
+		&li:nth-of-type(even) {
+			grid-template-areas:
+				"titel"
+				"tekst"
+				"quote"
+				"foto";
+		}
+
+		& h2 {
+			font-size: 6rem;
+			font-weight: 400;
+			color: var(--primary-text);
+			text-align: center;
+		}
+
+		& h3 {
+			grid-area: titel;
+			align-self: end;
+			font-size: 64px;
+			font-weight: 400;
+			color: var(--primary-text);
+		}
+
+		& p {
+			grid-area: tekst;
+			font-size: 21px;
+		}
+
+		& blockquote {
+			color: var(--primary-text);
+			border: 1px solid var(--quadraple-background);
+			border-radius: var(--border-radius-medium);
+			height: fit-content;
+			width: fit-content;
+			padding: 1em;
+		}
+
+		& a {
+			cursor: pointer;
+			display: inline-block;
+			padding: var(--tertiary-btn-padding);
+			border-radius: var(--secondary-btn-radius);
+			border: 1px solid var(--secondary-btn-color);
+			color: var(--secondary-btn-color);
+			font-size: var(--secondary-btn-font-size);
+			text-decoration: none;
+			transition: 0.2s ease;
+			height: fit-content;
+			width: fit-content;
+		}
+
+		& img {
+			grid-area: foto;
+		}
+	}
+
+	&:nth-of-type(4) {
+
+		& h2 {
+			font-size: 6rem;
+			font-weight: 400;
+			color: var(--primary-text);
+			text-align: center;
+		}
+
+		& h3 {
+			font-size: 64px;
+			font-weight: 400;
+			color: var(--primary-text);
+		}
+		& p {
+			font-size: 1.12rem;
+			font-weight: 400;
+		}
+		& a {
+			cursor: pointer;
+			display: inline-block;
+			padding: var(--tertiary-btn-padding);
+			border-radius: var(--secondary-btn-radius);
+			border: 1px solid var(--secondary-btn-color);
+			color: var(--secondary-btn-color);
+			font-size: var(--secondary-btn-font-size);
+			text-decoration: none;
+			transition: 0.2s ease;
+			height: fit-content;
+			width: fit-content;
+		}
+	}
+
+	&:nth-of-type(5) {
+
+		& ul {
+			margin: 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			list-style: "";
+			grid-gap: 1rem;
+		}
+	}
+}
+
+
+/* Section 2 */
+@media (width > 60em) {
+	main section:nth-of-type(3) li {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr max-content 1fr;
+		column-gap: 4em;
+		grid-template-areas:
+			"titel foto"
+			"tekst foto"
+			"quote foto";
+	}
+
+	main section:nth-of-type(3) li:nth-of-type(even) {
+		grid-template-areas:
+			"foto titel"
+			"foto tekst"
+			"foto quote";
+	}
+}
+
+
+@media screen and (min-width: 54em) {
+	main>section:nth-of-type(5)>ul {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+
+@media (width > 60em) {
+	main section:nth-of-type(2) {
+		border-radius: 4.5rem;
+	}
+}

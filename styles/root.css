@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "sonos";
+  src: url("../fonts/sonos.woff2");
+}
+
+html,
+body {
+  font-family: "sonos", sans-serif;
+}
+
+main img {
+  max-width: var(--max-width);
+  height: auto;
+  background-color: var(--img-background);
+}
+
+:root {
+  /* Color scheme */
+  color-scheme: light dark;
+
+  /* light-dark color kleurtjes */
+  --primary-background: light-dark(#ffffff, #000000);
+  --secondary-btn-color: light-dark(#000000, #ffffff);
+  --secondary-background: light-dark(#3b410b, #262a07);
+  --tertiary-background: light-dark(#ffffff, #1c1b22);
+  --quadraple-background: light-dark(#888888, #ffffff);
+
+  --img-text: light-dark(#ffffff, #ffffff);
+   --img-border-btn: light-dark(#ffffff, #ffffff);
+  --img-background: light-dark(#ffffff, #17171b);
+  --primary-text: light-dark(#000000, #ffffff);
+  --secondary-text: light-dark(#000000, #e1e1e1);
+  --tertiary-text: light-dark(#333333, #ffffff);
+  --primary-text-link: light-dark(#5b672a, #7b8d33);
+
+  --primary-btn-border-color: light-dark(#000000, #ffffff);
+
+
+--secondary-btn-radius: clamp(24px, 2vw, 40px);
+--secondary-btn-padding: clamp(1em, 1vw, 1em) clamp(1.4em, 3vw, 2.2em);
+--secondary-btn-font-size: clamp(1rem, 1.2vw, 1.1rem);
+
+
+/* Promo bar */
+--promo-bar-background: #3a410b;
+
+--tertiary-btn-padding: clamp(1em, 2vw, 1em) clamp(1.4em, 3vw, 2.2em);
+
+  --focus-ring-color: light-dark(#000000, #ffffff);
+  --secondary-focus-ring-color: light-dark(#ffffff, #ffffff);
+  --focus-ring-color-img: light-dark(#ffffff, #ffffff);
+
+  /* algemeene zooi */
+  --max-width: 100%;
+  --max-height: 100%;
+
+  --full-vh: 100vh;
+
+  /* Accesibility */
+
+  --img-overlay: rgba(0, 0, 0, 0.35);
+
+  /* Borders */
+
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
+  --border-radius-xlarge: 16px;
+  --border-radius-xxlarge: 50px;
+
+  /* Tekst */
+
+  --heading-xl: clamp(2.4rem, 5vw, 4.8rem);
+
+  /* Respsoniveness */
+  --gap: clamp(1rem, 6vw, 3rem);
+
+  /* Buttons */
+  --btn-font-size-small: font-size: clamp(1rem, 0.761rem + 1.3659vw, 2.4rem);
+  --btn-font-size-medium: clamp(1rem, 0.6585rem + 1.9512vw, 3rem);
+}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::after,
+  *::before {
+    animation-duration: 1ms !important;
+    /* 1 */
+    animation-delay: -1ms !important;
+    /* 2 */
+    animation-iteration-count: 1 !important;
+    /* 3 */
+    transition-duration: 1ms !important;
+    /* 4 */
+    transition-delay: -1ms !important;
+    /* 5 */
+  }
+
+  /* Als animations disabled is = disable vid */
+  .hero>section:first-of-type video {
+    display: none;
+
+  }
+
+  .hero>section:first-of-type {
+    background-image: url("../images/sonosBar.png");
+    background-size: cover;
+    /* covers the whole section */
+    background-position: center;
+    /* keeps image centered */
+    background-repeat: no-repeat;
+    /* no tiling */
+  }
+}
