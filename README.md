@@ -250,6 +250,8 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  Bij de 2e test is er al veel vooruitgang te zien zo is er veel verbeterd kwa toegangkelijkheid,
+
 </details>
 
 

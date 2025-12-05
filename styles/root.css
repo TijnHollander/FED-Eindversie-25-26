@@ -1,6 +1,6 @@
 @font-face {
   font-family: "sonos";
-  src: url("../fonts/sonos.woff2");
+  src: url("../font/sonos.woff2");
 }
 
 html,
@@ -113,5 +113,28 @@ main img {
     /* keeps image centered */
     background-repeat: no-repeat;
     /* no tiling */
+  }
+}
+
+
+/* Als de user reduced data aan heeft staan */
+@media (prefers-reduced-data: no-preference) {
+  @font-face {
+    font-family: "sonos";
+    src: url("../fonts/sonos.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  html,
+  body {
+    font-family:
+      "sonos",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      "Helvetica",
+      "Arial",
+      sans-serif;
   }
 }
