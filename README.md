@@ -251,7 +251,7 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   Bij de 2e test is er al veel vooruitgang te zien zo is er veel verbeterd kwa toegangkelijkheid,
-
+  ### WCAG formulier screenshots van elke pagina
 </details>
 
 
@@ -274,23 +274,27 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
 * Ik wil vragen over als alles aan de eisen voldoet, ik heb zojuist mijn repository voor de 5e keer helemaal omgegooid, dus kan er natuurlijk zomaar iets over het hoofd gelaten worden, dit wil ik dan z.s.m aanpakken.
 
 - Ronald:
-* Is het gebruik van comments duidelijk en overzichtelijk?
-* Is het gebruik tekst van bepaalde afbeeldingen duidelijk genoeg?
-* Schaling foto oplossen
+* Er zit padding aan de randen van de website na een schermgrootte van 1250px, hoe kan ik deze ook aanhouden responsive want ik gebruik nu een standaard rem
+* In de looking for godot text zitten links, als je het zinnetje standaard leest is er genoeg context voor de gebruiker om te snappen waar alles voor is. Maar als ze door de links tabben hebben ze mogelijk te weinig context, is het wijs om hier visually hidden text neer te zetten? Want als ze het hele zinnetje horen klinkt het heel raar
+* Werkt mijn skiplink goed op deze manier, zo niet hoe kan ik deze kan verbeteren?
+* Staan de links in mijn footer zo genoeg uit elkaar?
+* Is de manier hoe ik mijn footer heb gemaakt goed?
+
 - Daniel:
-* Vraag over navbar en styling over hoe de :root moet worden ingedeeld
+* vragen over responsiveness
 - Iz-Dine: 
-* Nieuwe pagina layout vragen.
+* Vragen over de gehele website, aangezien alles is missgegaan.
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
+  - Schrijf goed op wat je leuk vind voor het eindgesprek. Code ziet er goed uit, en voldoet aan alle eisen. Tip: WCAG formulier foto's in de readme zetten en zo te laten tonen hoe sonos website toegangelijkheid is verbeterd
+  - Nesting is vet handig om overzicht te behouden over je code, gelukkig had ik dit echter al grotendeels gebruikt.
+  - Meer padding en minere column-gap bij sommige elementen gebruiken, spacing lijkt soms akward als je dit te erg forceerd.
+  - Footer elementen meer uit elkaar zetten op mobile anders wordt het lastig om op sommige elementen te klikken
+  - Footer navigatie elementen veranderen naar nav
+  - 
 </details>
 
 

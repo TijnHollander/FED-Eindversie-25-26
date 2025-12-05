@@ -1,8 +1,3 @@
-
-
-
-
-
 /* BRONNEN
 1. https://cmd-amsterdam.nl/zelfevaluatie2024/standaard2/
 
@@ -20,7 +15,7 @@ body {
 main {
 	display: grid;
 	row-gap: var(--gap);
-   
+
 	grid-template-columns:
 		[full-start] 1fr [base-start] min(calc(100% - 2em), 72em) [base-end] 1fr [full-end];
 
@@ -42,8 +37,8 @@ main section {
 		text-align: center;
 		z-index: 2;
 		row-gap: 1em;
-		
-		
+
+
 
 		&::after {
 			content: "";
@@ -84,6 +79,7 @@ main section {
 	}
 
 	&:nth-of-type(2) {
+		grid-column: base;
 		position: relative;
 		display: grid;
 		justify-content: start;
@@ -145,7 +141,7 @@ main section {
 	}
 
 	&:nth-of-type(3) {
-
+		grid-column: base;
 
 		& ul {
 			list-style: "";
@@ -157,7 +153,8 @@ main section {
 		}
 
 		& li {
-			row-gap: var(--gap);
+			row-gap: 1em;
+			/* Fix dit ff voor spacing */
 			display: grid;
 			grid-template-columns: 1fr;
 			grid-template-rows: auto;
@@ -166,13 +163,7 @@ main section {
 				"tekst"
 				"quote"
 				"foto";
-			/* display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr max-content 1fr;
-			grid-template-areas:
-				"titel foto"
-				"tekst foto"
-				"quote foto"; */
+
 		}
 
 		&li:nth-of-type(even) {
@@ -187,7 +178,7 @@ main section {
 			font-size: clamp(2.5rem, 6vw, 6rem);
 			font-weight: 400;
 			color: var(--primary-text);
-			text-align: center;
+
 		}
 
 		& h3 {
@@ -232,9 +223,10 @@ main section {
 	}
 
 	&:nth-of-type(4) {
-     margin-top: 5rem;
-	 display: grid;
-	 row-gap: 2em;
+		margin-top: 5rem;
+		display: grid;
+		grid-column: base;
+		row-gap: 1em;
 
 		& h2 {
 			font-size: clamp(2.5rem, 6vw, 6rem);
@@ -249,10 +241,12 @@ main section {
 			font-weight: 400;
 			color: var(--primary-text);
 		}
+
 		& p {
 			font-size: clamp(0.95rem, 1.2vw, 1.12rem);
 			font-weight: 400;
 		}
+
 		& a {
 			cursor: pointer;
 			display: inline-block;
@@ -300,6 +294,13 @@ main section {
 			"foto titel"
 			"foto tekst"
 			"foto quote";
+	}
+}
+
+@media (min-width: 54em) {
+	main section:nth-of-type(3) h2 {
+		padding: 1em;
+		text-align: center;
 	}
 }
 
