@@ -149,11 +149,13 @@ main section {
 			/* Moet op 0 zodat de default value wordt weergeven aan de parent > body */
 			padding: 0;
 			/* zelfe hier  */
+			display: grid;
+			row-gap: 5em;
 
 		}
 
 		& li {
-			row-gap: 1em;
+			row-gap: 1.115em;
 			/* Fix dit ff voor spacing */
 			display: grid;
 			grid-template-columns: 1fr;

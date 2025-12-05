@@ -49,26 +49,31 @@ header ul:first-child {
   background-color: var(--promo-bar-background);
   color: var(--img-text);
   display: flex;
-  height: 5vh;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
   align-items: center;
-  justify-content: space-around;
+  justify-content:space-between;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
   text-decoration: none;
+  min-height: auto;
 }
 
 header ul:nth-of-type(1) li {
   list-style-type: "";
-  text-align: center;
+
 }
 
 header ul:nth-of-type(1) a {
   color: var(--main-color);
   text-decoration: none;
   text-underline-position: below;
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  white-space: nowrap;
 }
 
 
 /**********************/
-/* MAIN NAV (structure based) */
+/* MAIN NAV           */
 /**********************/
 
 header>nav {
@@ -79,7 +84,7 @@ header>nav {
   /* max-width: var(--grid-max-width); */
   margin: 0 auto;
   padding: 0.75rem 1.5rem;
-  height: 10vh;
+  height: clamp(3.5rem, 10vh, 5rem);
 
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -358,6 +363,26 @@ footer>section:first-of-type form input[type="email"] {
   min-width: min(20rem, 100%);
   background-color: #111;
   color: #fff;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 80ms ease;
+  will-change: transform, background-color;
+}
+
+footer>section:first-of-type form input[type="email"]:hover,
+footer>section:first-of-type form input[type="email"]:focus {
+  background-color: #1a1a1a;
+  box-shadow: 0 0 0 2px #fff;
+  outline: none;
+}
+
+footer>section:first-of-type form input[type="email"]:focus-visible {
+  background-color: #1a1a1a;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+footer>section:first-of-type form input[type="email"]:active {
+  transform: scale(0.995);
+  opacity: 0.96;
 }
 
 footer>section:first-of-type form button {
@@ -368,6 +393,25 @@ footer>section:first-of-type form button {
   background-color: #fff;
   color: #000;
   font-weight: 500;
+  transition: background-color 180ms ease, color 180ms ease, transform 80ms ease, box-shadow 180ms ease;
+  will-change: transform, background-color;
+}
+
+footer>section:first-of-type form button:hover,
+footer>section:first-of-type form button:focus-visible {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.1);
+}
+
+footer>section:first-of-type form button:active {
+  transform: translateY(1px) scale(0.997);
+  opacity: 0.96;
+}
+
+footer>section:first-of-type form button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 /* Checkbox */
@@ -488,4 +532,48 @@ footer>section:last-of-type>ul a:hover {
     border-bottom: 1px solid #333;
     padding-bottom: 1rem;
   }
+}
+
+/****************************/
+/* Footer link states      */
+/****************************/
+
+/* Footer links general transitions */
+footer a {
+  transition: color 180ms ease, text-decoration 180ms ease, transform 80ms ease, opacity 180ms ease;
+  will-change: transform, color;
+}
+
+/* Hover and focus states for footer section 2 links */
+footer>section:nth-of-type(2) a:hover,
+footer>section:nth-of-type(2) a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer>section:nth-of-type(2) a:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+footer>section:nth-of-type(2) a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Hover and focus states for footer section 3 (last) links */
+footer>section:last-of-type a:hover,
+footer>section:last-of-type a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer>section:last-of-type a:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+footer>section:last-of-type a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
