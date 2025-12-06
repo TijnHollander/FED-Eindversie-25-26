@@ -377,15 +377,36 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+ - Ik heb mijn footer meer spacing gegeven dit was vrij vlot gedaan:
+ <img src="readme-images/FooterSpacing.png" width="375px" alt="top">
+
+ - Het gebruiken van grid breakout en het toepassen daarvan was ideaal, en mega interessant hierdoor is mijn gehele website super smooth en responsive.
+ - Ik heb geleerd om mijn eigen style-guide soortvan te maken doormiddel van :root.
+ - Ik heb geleerd hoe een dark & light-mode functionaliteit werkt, met alleen CSS.
+ <img src="readme-images/light&Dark.png" width="375px" alt="top">
+
+ - Ik heb geleerd hoe ik met behulp van grid-template-area "lastige" layouts heel simpel kan indelen.
+  <img src="readme-images/gridTemplateArea.png" width="375px" alt="top">
+
+ - Ik heb geleerd hoe ik moet werken met een screenreader (op Mac), en het belang van een screenreader, en hoe je dit kunt toepassen op je eigen website.
+
+ - Ik heb geleerd hoe je states duidelijk en overzichtelijk kunt tonen/weergeven.
+ <img src="readme-images/buttonFocusState.png" width="375px" alt="top">
+
+ - Ik heb geleerd hoe ik alles super responsive kan maken.
+ - Ik heb geleerd hoe ik alles super goed naar elkaar kan laten overlopen.
+
+ - En ik heb echt nog veel meer geleerd maar ik heb voor mijn gevoel momenteel de super belangrijkste bevindingen opgeschreven.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
+  - Het was erg lastig om telkens opnieuw te beginnen, het was telkens wel een klap maar gelukkig doordat ik perfectionisch was viel het ook wel weer mee ik wilden het elke keer beter doen dan de vorige, en hier leer je ook natuurlijk het meeste van.
+  - Helaas ben ik niet toegekomen om de scroll-driven animations toe te voegen aan mijn sonos-website (Ik heb deze echter wel in een andere repo aangemaakt en getest), ik wil dit echter nog wel gaan oppakken in mijn vrije tijd aangezien ik dit mega leuk vond om te doen.
+  -
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
 
@@ -401,12 +422,20 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1 MP3 sonos: https://youtu.be/DwIdo-4jwNk
-  2. bron 2  Nav: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+  1. bron 1 MP3 sonos (Background video): https://youtu.be/DwIdo-4jwNk
+  2. bron 2  Nav (Om een basis nav-bar snel neer te zetten): https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
   3. bron 3 FlexBox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   4. Bron 4: Child delay animations: https://stackoverflow.com/questions/8294400/css-animations-with-delay-for-each-child-element
-  5. Bron 5: Scroll-driven-animations: https://youtu.be/gYwmiZ0Mza8
-  6. Bron 6: Pause button https://yootheme.com/support/question/165803
+  5. Bron 5: Scroll-driven-animations (Ik heb dit echter voor nu weggelaten): https://youtu.be/gYwmiZ0Mza8
+  6. Bron 6: Pause button (Om de background-video te stoppen) https://yootheme.com/support/question/165803
+  7. Bron 7: Alle Content en images zijn eigendom van: https://www.sonos.com/nl-nl/home
+  8. Bron 8: Layout-breakouts: https://ryanmulligan.dev/blog/layout-breakouts/ 
+  9. bron 9: Sanne (Shooft) voor veel hulp kwa grid-layout structuur en veel meer: https://codepen.io/shooft
+  10. Bron 10: A11y project, voor veel accessbility CSS helpers, ik wist namelijk zelf niet hoe ik dit het beste neer kon zetten door de vorobeelden van A11y project is dit me gelukt: https://www.a11yproject.com/
+  11. Bron 11: Light en darkmode toepassen in CSS (Snelle preset heb ik gekopieerd en aangepast naar mijn eigen): https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme
+  12. Bron 12: GitHub Co-pilot, voor bugs die ik echt niet kon vinden vaak waren dit kleuren of variablen in mijn root waar een ";" was vergeten, en ik niet begreep waarom mijn variable niet werkte/aangeroepen werd.
+
+
 
 
 </details>
