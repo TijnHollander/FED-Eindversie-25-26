@@ -78,7 +78,7 @@ header ul:nth-of-type(1) a {
 
 header>nav {
   background-color: var(--tertiary-background);
-  border-bottom: 1px solid var(--primary-background);
+  border-bottom: 1px solid var(--border-nav-bottom);
   z-index: 10;
 
   /* max-width: var(--grid-max-width); */

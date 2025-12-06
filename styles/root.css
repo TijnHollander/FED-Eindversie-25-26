@@ -24,6 +24,7 @@ main img {
   --secondary-background: light-dark(#3b410b, #262a07);
   --tertiary-background: light-dark(#ffffff, #1c1b22);
   --quadraple-background: light-dark(#888888, #ffffff);
+  --border-nav-bottom: light-dark(#888888, #111013);
 
   --img-text: light-dark(#ffffff, #ffffff);
   --img-border-btn: light-dark(#ffffff, #ffffff);
