@@ -26,25 +26,30 @@ main img {
   --quadraple-background: light-dark(#888888, #ffffff);
 
   --img-text: light-dark(#ffffff, #ffffff);
-   --img-border-btn: light-dark(#ffffff, #ffffff);
+  --img-border-btn: light-dark(#ffffff, #ffffff);
   --img-background: light-dark(#ffffff, #17171b);
   --primary-text: light-dark(#000000, #ffffff);
   --secondary-text: light-dark(#000000, #e1e1e1);
   --tertiary-text: light-dark(#333333, #ffffff);
   --primary-text-link: light-dark(#5b672a, #7b8d33);
 
+  --selection-bg: light-dark(#bfe1ff, #274763);
+  --selection-text: light-dark(#000000, #ffffff);
+
+
+
   --primary-btn-border-color: light-dark(#000000, #ffffff);
 
 
---secondary-btn-radius: clamp(24px, 2vw, 40px);
---secondary-btn-padding: clamp(1em, 1vw, 1em) clamp(1.4em, 3vw, 2.2em);
---secondary-btn-font-size: clamp(1rem, 1.2vw, 1.1rem);
+  --secondary-btn-radius: clamp(24px, 2vw, 40px);
+  --secondary-btn-padding: clamp(1em, 1vw, 1em) clamp(1.4em, 3vw, 2.2em);
+  --secondary-btn-font-size: clamp(1rem, 1.2vw, 1.1rem);
 
 
-/* Promo bar */
---promo-bar-background: #3a410b;
+  /* Promo bar */
+  --promo-bar-background: #3a410b;
 
---tertiary-btn-padding: clamp(1em, 2vw, 1em) clamp(1.4em, 3vw, 2.2em);
+  --tertiary-btn-padding: clamp(1em, 2vw, 1em) clamp(1.4em, 3vw, 2.2em);
 
   --focus-ring-color: light-dark(#000000, #ffffff);
   --secondary-focus-ring-color: light-dark(#ffffff, #ffffff);
@@ -59,6 +64,11 @@ main img {
   /* Accesibility */
 
   --img-overlay: rgba(0, 0, 0, 0.35);
+
+
+  --btn-control-color: #ffffff;
+  --btn-pause-background: rgba(255, 255, 255, 0.45);
+  --btn-pause-border: rgba(255, 255, 255, 0.12);
 
   /* Borders */
 
@@ -80,10 +90,22 @@ main img {
   --btn-font-size-medium: clamp(1rem, 0.6585rem + 1.9512vw, 3rem);
 }
 
+/* Global selection styling — uses root variables and respects dark/light mode */
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+::-moz-selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
 
 
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::after,
   *::before {

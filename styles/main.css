@@ -313,11 +313,45 @@ header a:active {
 }
 
 
+/* Video control (pause en play) */
+.video-toggle {
+  position: absolute;
+  right: clamp(0.75rem, 3vw, 2.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--btn-pause-background);
+  color: var(--btn-control-color);
+  border: 1px solid var(--btn-pause-border);
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 30;
+  backdrop-filter: blur(4px);
+  transition: background-color 160ms ease, transform 120ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
 
+.video-toggle:hover,
+.video-toggle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.video-toggle:active {
+  transform: translateY(-50%) scale(0.98);
+}
 
 /****************************/
 /* Footer                  */
 /****************************/
+
+
+/* Ensure the video's container is positioned so the control sits over it */
+main section:nth-of-type(1) {
+  position: relative;
+}
+
 footer {
   background-color: #222;
   color: #fff;

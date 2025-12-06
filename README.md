@@ -252,6 +252,39 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
 
   Bij de 2e test is er al veel vooruitgang te zien zo is er veel verbeterd kwa toegangkelijkheid,
   ### WCAG formulier screenshots van elke pagina
+
+#### Pagina 1
+* Hierbij op de echte Sonos website, was er spraken van inconsistentie, er werd soms makkelijke taal gebruik en soms totaal niet, hetzelfde geldt voor de bestaande aria-labels, alts etc.
+* Ook op de echte Sonos website, miste sommige a attributes een aria-label en sommige buttons ook... Zelfs afbeeldingen miste af en toe een alt, dit heb ik aangepakt en ervoor gezorgd dat alles op mijn pagina 100% zeker een alt, aria-label etc heeft.
+* Op de officiele Sonos website kwamen verschrikkelijk veel errors terug uit de W3C validator, zelf heb ik er op mijn website 0.
+  <img src="readme-images/wcag1.jpg" width="375px" alt="top">
+
+
+#### Pagina 2
+* De focus state op de officiele sonos website is niet echt bepaald geschikt voor iemand met een visuele beperking, zo als je over sommige elementen heen tabt is de border veelste te klein en amper te zien. Ook matcht het niet echt de layout van de sonos website.
+* In de footer van de sonos website staan alle a attributen veelste dicht op elkaar dit is niet echt praktisch als je op telefoon zit en wilt navigeren, je hebt dan de kans om op een andere link te klikken...
+  <img src="readme-images/wcag2.jpg" width="375px" alt="top">
+
+#### Pagina 3
+* De headings zijn inconsistent, en kloppen niet de H1 op de officiele website van Sonos geeft ook niet veel informatie waarover de website gaat, er worden ook meerdere H1 elementen gebruikt, en de volgorde klopt ook niet...
+* Niet alle image elementen bevatten een alt-attribute
+* Sommige images die tekst bevatten bevat de image niet deze tekst in de alt, echter is deze afbeelding nu weg doordat de website naar een kerst thema is gegaan
+  <img src="readme-images/wcag3.jpg" width="375px" alt="top">
+
+
+#### Pagina 4
+* Op de officiele website van Sonos wordt het A element vaak gebruikt voor links echter heeft deze wel soms een type=button, dit brengt ook vaak errors op in de W3C validator en staat niet zo netjes...
+* Links openen niet in een nieuwe tab op de officiele sonos website.
+  <img src="readme-images/wcag4.jpg" width="375px" alt="top">
+
+#### Pagina 5
+* De officiele Sonos website ondersteund GEEN light & dark mode
+* DSe officiele Sonos website HIGH-CONTRAST mode is best wel onduidelijk... Ik had het aangezet en ik snapte er helemaal niks van er stond in mijn navbar dat ik op 3 pagina's tegelijk was doordat de active state op 3 verschillende links stond.
+* Wanneer ik mijn animaties uit had gezet op windows, bleef de video op de sonos website nog spelen, en ook bleef er een animatie video spelen onderin.
+* De teksten op de officiele website van Sonos die boven een afbeelding stonden vond ik erg onduidelijk er ontbrak een background filter voor mijn gevoel wat de achtergrond iets donkerder maakt zodat alles fijner en aangenamer is om te lezen.
+* Ik heb ook geen custom selection colors kunnen vinden op de officiele website.
+
+  <img src="readme-images/wca5.jpg" width="375px" alt="top">
 </details>
 
 
@@ -340,6 +373,7 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   3. bron 3 FlexBox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   4. Bron 4: Child delay animations: https://stackoverflow.com/questions/8294400/css-animations-with-delay-for-each-child-element
   5. Bron 5: Scroll-driven-animations: https://youtu.be/gYwmiZ0Mza8
+  6. Bron 6: Pause button https://yootheme.com/support/question/165803
 
 
 </details>
