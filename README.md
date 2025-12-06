@@ -20,10 +20,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Tijn Hollander
 
   #### Je startniveau:
-  Ik zit tussen de rode & zwarte piste, ik heb hiervoor de opleiding software development gedaan (en afgerond), echter heb ik al een tijdje niet meer geprogammeerd. 
+  Ik zit tussen de rode & zwarte piste, ik heb hiervoor de opleiding software development gedaan (en afgerond), echter heb ik al een tijdje niet meer vanilla geprogammeerd. 
 
   #### Je focus:
-  Voor nu kies ik responsiveness aangezien ik niet zo goed begrijp wat er bedoeld wordt met surface
+  Ik heb gekozen voor Responsive Design, aangezien dit altijd nog wel mijn zwakke kant is, en ik dit ook vaak altijd het meest interessante en uitdagende vind.
  
 </details>
 
@@ -62,7 +62,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 Gelijk zag ik al een foutje namelijk op veel `<a>` links ontbreekt een `aria-label`.  
 dit zorgt ervoor dat de narrator alleen de zichtbare linkstekst opleest, wat nu dus: **"Shop cadeaus"** is.  
 De gebruiker weet dan niet wat voor cadeaus bedoeld worden of waar de link precies naartoe leidt.  
-Dit komt bij bijna alle `<a>` elementen voor sommige zijn natuurlijk wel vanzelfsprekend.
+Dit komt bij bijna alle `<a>` elementen voor sommige zijn natuurlijk wel vanzelfsprekend, maar sommige zijn nog wel echt duidelijk en kunnen extra informatie vereisen.
 
 <img src="readme-images/readme1.png" width="375px">
 
@@ -102,7 +102,6 @@ Lijst met bevindingen die in de test naar voren kwamen:
 - **Meerdere `<h1>`-elementen** op EEN pagina.  
 - Niet alle **afbeeldingen hebben een `alt` attribvute**.  
 - Afbeeldingen die **tekst bevatten** hebben geen alt-tekst met de inhoud die op de afbeelding staat.  
-- De **video autoplayt** direct bij het laden van de pagina.  
 - Ze gebruiken `<a>` voor **buttons i.p.v. `<button>` elementen**.  
 - **Links** openen niet in een nieuwe tab, wat voor sommige gebruikers verwarrend kan zijn.  
 - Veel links missen een **`aria-label`**, waardoor context ontbreekt voor screen readers.  
@@ -110,6 +109,16 @@ Lijst met bevindingen die in de test naar voren kwamen:
 - **tab** en **focus** werken goed.  
 - Waar `aria-labels` wel gebruikt zijn, zijn ze **kort en duidelijk**, echter is er wel veel verbetering nodig bij de rest...
 
+
+### Dus wat ga ik doen?
+- Ik ga ervoor zorgen dat mijn W3C checker 0 errors heeft of warnings.
+- Ik zorg voor maar EEN H1 element met informatieve tekst, i.p.v een onduidelijke titel.
+- Ik geef elke IMG element een informatieve ALT indien deze afbeelding decoratief is dan hou ik deze op NULL
+- Ik ga alle type=button op alle A elementen weghalen.
+- Ik ga ervoor zorgen dat de links in een nieuw tablad openen.
+- Ik ga ervoor zorgen dat elke link een informatieve aria-label bevat.
+- Ik ga ervoor dat mijn focus, hover & active states allemaal overzichtelijk en duidelijk zijn.
+- #### Kort samengevat aangezien er nog echt mega veel veranderd moet worden wil ik dit grotendeels opnieuw doen, ik ben perfectionistisch en hier leer ik het meeste van door telkens alles opnieuw te doen.
 </details>
 
 
@@ -120,13 +129,12 @@ Lijst met bevindingen die in de test naar voren kwamen:
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
+  - Zie hier de gehele breakdown
   <img src="readme-images/breakdown.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
+  - Zie hier een dynamisch deel (Dropdown menu)
   <img src="readme-images/breakdownMenu.png" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -142,8 +150,13 @@ Lijst met bevindingen die in de test naar voren kwamen:
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
-  Dit ging goed:
-  * CSS (Werken met nth-oftype werken ging erg vlot).
+   #### Dit ging goed:
+   - Ik had al erg vlot onder de knie hoe selectors werkte.
+
+  #### Dit ging minder goed:
+  - Vaak vergat ik dat ik de hoofd-parent b.v.d main voor mijn selectors moest zetten, zo veranderde er telkens wat in mijn navbar... 
+  - Op een gegeven moment werd alles onduidelijk doordat ik niet gebruik maakte van nesting.
+  <img src="readme-images/spaghettiCode.png" width="375px" alt="Spaghetti code">
 
 
   ### Agenda voor meeting
@@ -184,6 +197,7 @@ Lijst met bevindingen die in de test naar voren kwamen:
   #### Wat moet ik nu verbeteren?
   * Ik moet nu de figures om mijn images weghalen
   * h1 die er nu staat weghalen, en een nieuwe toevoegen en verstoppen buiten de main 
+- #### Ik ga wederom mijn gehele code doorpluimen en grotendeels alles opnieuw schrijven.
 
 </details>
 
@@ -199,12 +213,12 @@ Lijst met bevindingen die in de test naar voren kwamen:
 ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 #### Dit ging goed:
-* Het aanmaken van de footer, ging vrij soepel, en ik ben zelf ook best tevreden met het eindresultaat, het enige dat ik nog wil doen is het nog meer responsive te maken door het naar dropdowns te laten veranderen.
+* Het aanmaken van de footer, ging vrij soepel, en ik ben zelf ook best tevreden met het eindresultaat, het enige dat ik nog wil doen is het nog meer responsive te maken b.v.d dat het steeds in rijen naast elkaar gaat momenteel gaat het van 1 rij meteen naar 4 maar ik wil van 1 naar 2 naar 3 naar 4 naar uiteindelijk 5.
 * Navigation in de Navbar ben ik ook blij mee, ik heb hier ook een leuke animatie bij toegevoegd doormiddel van transform en transition, ik heb 2 spans gepakt deze heb ik een border gegeven en ge-rotate, en dat zorgt voor een mooie overgang.
 
 
 #### Dit ging wat minder:
-* Grid layouts, ik ben persoonlijk nog niet helemaal tevreden over hoe mijn html structuur overgaat naar grid-layouts, ik ben zelf al perfectionistisch dus als iets me niet zint blijf ik het maar zien en kan ik het niet laten gaan. Echter heb ik tot heden hiervoor nog geen oplossing voor gevonden.
+* Grid layouts, ik ben persoonlijk nog niet helemaal tevreden over hoe mijn html structuur overgaat naar grid-layouts, ik ben zelf al perfectionistisch dus als iets me niet zint blijf ik het maar zien en kan ik het niet laten gaan. Echter heb ik tot heden hiervoor nog geen oplossing voor gevonden. Ik heb hierdoor ook echt meerdere keren mijn GEHELE main opnieuw geschreven.
  <img src="readme-images/gridLayout.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
   ### Agenda voor meeting
@@ -234,7 +248,8 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   - Begin in CSS met generieke dingen en bouw langzaam naar beneden naar specifieke dus Header | Header li | header li a | etc...
   - Hero main
   - Maak gebruik van de search tag
-- ...
+  - Ik  heb dus geleerd hoe ik mijn home-pagina content het beste kan indelen, kwa grid-layout.
+- #### Zoals je hierboven zag bij "IK zelf" vroeg ik hoe ik de grid-layout het beste kon aanpakken, ik kreeg gelijk iets nieuws te zien, waardoor mijn oude code alweer "outdated" was en ik wederom grotendeels alles opnieuw ben gaan schrijven.
 
 </details>
 
@@ -297,7 +312,21 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  * Dit ging goed
+  - Voorheen had ik allemaal errors in mijn W3C Validator, ik heb dit allemaal vlot en vlug aangepast naar goeie en nette HTML.
+ <img src="readme-images/w3cChecker.png" width="375px" alt="top">
+
+  - Het werken met de nieuwe grid-breakout dat Sanne met liet zien, dit was echt mega handig en super leerzaam en wilde ik ook gelijk opnieuw beginnen hierdoor wat ik wederom ook heb gedaan 
+  
+  <img src="readme-images/gridBreakout.png" width="375px" alt="top">
+  <img src="readme-images/MijnGridLayout.png" width="375px" alt="top">
+
+  * Dit ging minder goed
+  - De hoeveelheden ik opnieuw ben begonnen, echter heb ik hier wel veel van geleerd. Zo had ik binnen 2-3 uur bijna weer een gehele website, met nesting gemaakt
+  <img src="readme-images/githubCommit.png" width="375px" alt="top">
+
+  - Contrast instellingen vinden, ik vond het nog erg lastig om deze te vinden, ook wist ik niet echt hoe ik dit moest toepassen. Moest dit met een media query? of gebeurd dit automatisch? Dus had ik even snel de docent gevraagd voor wat extra hulp hierover. 
+
 
 
   ### Agenda voor meeting
@@ -326,8 +355,12 @@ Ik heb even snel de structuur veranderd zodat alles wat gemakkelijker te typen i
   - Nesting is vet handig om overzicht te behouden over je code, gelukkig had ik dit echter al grotendeels gebruikt.
   - Meer padding en minere column-gap bij sommige elementen gebruiken, spacing lijkt soms akward als je dit te erg forceerd.
   - Footer elementen meer uit elkaar zetten op mobile anders wordt het lastig om op sommige elementen te klikken
-  - Footer navigatie elementen veranderen naar nav
-  - 
+
+  ### Wat moet ik nog aanpassen?
+  - Padding en witregels bij bepaalde teksten en elementen toevoegen zodat alles consistent is.
+  - Footer elementen meer uit elkaar op first-mobile-design
+  - Procesverslag bijwerken.
+
 </details>
 
 

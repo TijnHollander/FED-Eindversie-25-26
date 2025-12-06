@@ -15,7 +15,6 @@ body {
 main {
 	display: grid;
 	row-gap: var(--gap);
-
 	grid-template-columns:
 		[full-start] 1fr [base-start] min(calc(100% - 2em), 72em) [base-end] 1fr [full-end];
 
